@@ -1,10 +1,13 @@
 package athena;
-import java.util.*;
+
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import athena.Query.QueryIntPair;
 
-import com.google.common.collect.*;
+import com.google.common.collect.AbstractIterator;
+import com.google.common.collect.Maps;
 
 public class StoreIterator<V> extends AbstractIterator<V> {
 
