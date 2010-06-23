@@ -11,9 +11,7 @@ For example, imagine you stored three types of animal with these tags:
 
 <pre>
 ["four-legs", "hair", "domesticated"] -> "dog"
-
 ["four-legs", "hair"] -> "wolf"
-
 ["two-legs", "feathers"] -> "bird"
 </pre>
 
@@ -28,6 +26,9 @@ Or let's say you wanted to get all the non-domesticated four legged animals:
 <pre>
   and(tag("four-legs"), not(tag("domesticated")))
 </pre>
+
+Athena allows you to do this, and what's more, it strives to allow you
+to do this efficiently.
 
 How it works
 ------------
