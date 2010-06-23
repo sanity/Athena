@@ -11,7 +11,7 @@ Athena is released under the GNU Lesser Public License V2.1. Please see
 
 Overview
 --------
-Athena is a datastructure which allows you to store objects, associating each
+Athena is an in-memory datastructure which allows you to store objects, associating each
 with a set of Strings, known as tags.  You can then retrieve these objects by
 specifying a boolean query on the tags.  The prototype implementation is written
 in Java.
