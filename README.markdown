@@ -70,7 +70,7 @@ Currently objects may only be added to Athena, and once added, their tags
 cannot be changed.  In the future this won't be the case, but we must
 walk before we fly.
 
-When objects are added, they are placed in an array (an ArrayList is currently
+When objects are added, they are appended to an array (an ArrayList is currently
 used for this).  Each object is accompanied by a map of "shortcuts", each of
 which says "all of the objects after this one and before object X
 do NOT match query Y".  This means that if you are looking for objects matching
