@@ -112,7 +112,7 @@ public class StoreIterator<V> extends AbstractIterator<V> {
 			}
 
 			// If this current Value matches the query, return it
-			if (query.match(current.tags))
+			if (current.tags != null && query.match(current.tags))
 				return current.value;
 
 			// The current value didn't match, continue the while() loop
