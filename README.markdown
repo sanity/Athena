@@ -4,6 +4,10 @@ Athena
 An efficient in-memory data structure supporting arbitrary boolean queries
 --------------------------------------------------------------------------
 
+Wiki, Mailing lists etc
+-----------------------
+These are hosted on [Google Code](http://code.google.com/p/athena-tag-store/)
+
 License
 -------
 Athena is released under the GNU Lesser Public License V2.1. Please see
