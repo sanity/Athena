@@ -14,6 +14,8 @@ public class Test1 {
 
 		final Query qB = and("3", and(and(and("3", "2"), not("6")), not(and(not("3"), and("1", "4")))));
 
+		// In this store, the values stored are the tags associated with them. A
+		// bit weird I know, but I thought it might be useful for debugging.
 		store = new Store<Set<String>>(2);
 		final Random r = new Random(0);
 		for (int x = 0; x <= 10000; x++) {
