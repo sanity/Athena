@@ -56,16 +56,17 @@ walk before we fly.
 
 When objects are added, they are placed in an array (an ArrayList is currently
 used for this).  Each object is accompanied by a map of "shortcuts", each of
-which basically says "all of the objects after this one and before object X
+which says "all of the objects after this one and before object X
 do NOT match query Y".  This means that if you are looking for objects matching
 query Y, then you can skip to object X.  It further means that if you are 
 looking for objects that match query Z, and you know that no object that
 matches query Z will match query Y, then you can also skip to object X.
 
-Ok, cool, but where do these shortcuts come from?  Well, much like Hansel and
-Gretel, they are created like breadcrumbs while Athena is searching for stuff.
-Basically as Athena searches, it keeps track of objects it could have skipped,
-and creates shortcuts to avoid them.
+So where do these shortcuts come from?  Well, much like Hansel and
+Gretel dropped breadcrumbs, they are created while Athena is searching for 
+stuff. Basically as Athena searches, it keeps track of objects it could have 
+skipped, and creates shortcuts to avoid checking those objects in the future.
+The process bears some resemblance to [skip lists](http://en.wikipedia.org/wiki/Skip_list).
 
 Furthermore, since we can't have an infinite number of shortcuts, we only
 keep those that seem to be useful (ie. we delete the least recently used 
