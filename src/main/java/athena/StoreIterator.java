@@ -4,10 +4,10 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import athena.Query.QueryIntPair;
-
 import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.Maps;
+
+import athena.Query.QueryIntPair;
 
 public class StoreIterator<V> extends AbstractIterator<V> {
 
