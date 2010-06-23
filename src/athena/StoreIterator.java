@@ -51,8 +51,8 @@ public class StoreIterator<V> extends AbstractIterator<V> {
 			}
 			boolean matched = false;
 			if (current.tags != null) { // Don't do this for the seed value
-					iterable.counter++;
-					matched = query.match(current.tags);
+				iterable.counter++;
+				matched = query.match(current.tags);
 				for (final Entry<Query, Value<V>> e : previousMatchMap.entrySet()) {
 					if (e.getKey().match(current.tags)) {
 						if (position > e.getValue().position + 1) {
@@ -90,6 +90,11 @@ public class StoreIterator<V> extends AbstractIterator<V> {
 
 			if (matched)
 				return current.value;
+		}
+
+		// We've run out of values, point everything to one after the last one
+		for (final Entry<Query, Value<V>> e : previousMatchMap.entrySet()) {
+			e.getValue().shortcuts.put(e.getKey(), position);
 		}
 
 		return endOfData();

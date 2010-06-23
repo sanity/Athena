@@ -33,7 +33,7 @@ public class Store<V> {
 						return false;
 					}
 				}
-				if (!e.getKey().match(values.get(e.getValue()).tags)) {
+				if (e.getValue() < values.size() && !e.getKey().match(values.get(e.getValue()).tags)) {
 					System.out.println(e.getKey() + " doesn't match " + value
 							+ " even though this is skipped to from position " + x);
 					return false;
