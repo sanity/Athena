@@ -6,13 +6,6 @@ import athena.Query.QueryIntPair;
 
 import com.google.common.collect.*;
 
-/*
- * (c) Copyright 2008 Uprizer Labs Llc
- * All rights reserved
- * 
- * This source code is a trade secret of Uprizer Labs Llc.
- */
-
 public class StoreIterator<V> extends AbstractIterator<V> {
 
 	private final Store<V> parent;
