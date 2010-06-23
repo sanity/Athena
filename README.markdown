@@ -47,6 +47,14 @@ to do this efficiently even with millions of objects and queries far more
 complex than these simple examples.  It supports any combination of
 "and", "or", and "not" boolean operations.
 
+Applications
+------------
+The motivation for designing Athena was a situation where I have tens of thousands 
+of objects, each of which may have 10-20 tags, and where I need to be able to
+retrieve these objects using boolean queries in a matter of milliseconds.  This
+implies that there is no time to do a disk seek, the data must be in memory,
+and an exhaustive search will be out of the question.
+
 How it works
 ------------
 So the naive approach to this problem would be to do an exhaustive scan of
