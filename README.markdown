@@ -73,3 +73,10 @@ please [let me know](mailto:ian.clarke@gmail.com).
 
 [This file](http://github.com/sanity/Athena/blob/master/src/athena/Test1.java)
 provides a good example of basic usage.
+
+Current status
+--------------
+Still just a prototype, doesn't support modification or deletion of objects,
+and probably lots of room for efficiency improvements.  Also it probably
+isn't thread safe.  All of these shortcomings should be addressable without
+too much effort, this is still a very young endeavor.
