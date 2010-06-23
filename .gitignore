@@ -1,16 +1,3 @@
 .svn/
-sensearray-dist/
-bin/
-classes/
-*.dat
-*.class
-*.str
-config.ini
-dso*
-history/
-terracotta/
 target/
-temp-testng-customsuite.xml
 test-output/
-offerPool.txt
-sa-conf.json
