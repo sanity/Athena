@@ -83,7 +83,7 @@ Gretel dropped breadcrumbs, they are created while Athena is searching for
 stuff. Basically as Athena searches, it keeps track of objects it could have 
 skipped, and creates shortcuts to avoid checking those objects in the future.
 I've done my best to document the shortcut creation algorithm through commenting 
-in the code, most of the action occurs in [http://github.com/sanity/Athena/blob/master/src/main/java/athena/StoreIterator.java](StoreIterator.java).
+in the code, most of the action occurs in [StoreIterator.java](http://github.com/sanity/Athena/blob/master/src/main/java/athena/StoreIterator.java).
 
 Note also that, since we can't have an infinite number of shortcuts, we only
 keep those that seem to be useful (ie. we delete the least recently used 
