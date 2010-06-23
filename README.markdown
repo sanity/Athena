@@ -38,7 +38,8 @@ Or let's say you wanted to get all the non-domesticated four legged animals:
 
 Athena allows you to do this, and what's more, it strives to allow you
 to do this efficiently even with millions of objects and queries far more
-complex than these simple examples.
+complex than these simple examples.  It supports any combination of
+"and", "or", and "not" boolean operations.
 
 How it works
 ------------
