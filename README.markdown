@@ -7,7 +7,7 @@ An efficient in-memory data structure supporting arbitrary boolean queries
 Important links
 -----------------------
 * [Mailing List](http://groups.google.com/group/athena-discuss) - Please sign up to follow and participate in development
-* [Bug Tracker](http://code.google.com/p/athena-tag-store/issues/list)
+* [Issue Tracker](http://code.google.com/p/athena-tag-store/issues/list) - Report problems or suggestions here
 * [Google Code page](http://code.google.com/p/athena-tag-store/) - Mainly for the bugtracker
 * [Source Code](http://github.com/sanity/Athena) - Hosted on Github
 
