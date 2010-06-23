@@ -1,6 +1,11 @@
 Athena, an efficient in-memory data structure supporting arbitrary boolean queries
 ==================================================================================
 
+License
+-------
+Athena is released under the GNU Lesser Public License V2.1. Please see
+http://www.gnu.org/licenses/lgpl-2.1.html for further information.
+
 Overview
 --------
 Athena is a free Java library which allows you to store objects, associating each
