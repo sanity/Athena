@@ -78,6 +78,10 @@ public abstract class Query {
 			return obj.toString().equals(toString());
 	}
 
+	/**
+	 * @return A non-exhaustive set of other queries that will not match if this
+	 *         query doesn't match a given set of tags.
+	 */
 	public abstract Set<Query> falseIfFalse();
 
 	public abstract QueryIntPair findShortCut(final HashMap<Query, Integer> shortcuts);
@@ -93,6 +97,11 @@ public abstract class Query {
 	@Override
 	public abstract String toString();
 
+	/**
+	 * 
+	 * @return A non-exhaustive set of other queries that must match if this
+	 *         query matches a given set of tags.
+	 */
 	public abstract Set<Query> trueIfTrue();
 
 	public static class And extends Query {
