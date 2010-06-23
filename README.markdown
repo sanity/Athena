@@ -93,7 +93,7 @@ How to play with it
 It should work "out of the box" in [Eclipse](http://eclipse.org/).  If not
 please [let me know](mailto:ian.clarke@gmail.com).
 
-[This file](http://github.com/sanity/Athena/blob/master/src/athena/Test1.java)
+[This unit test](http://github.com/sanity/Athena/blob/master/src/test/java/athena/IntegrityTests.java)
 provides a good example of basic usage.
 
 Current status
