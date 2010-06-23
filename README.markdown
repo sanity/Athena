@@ -82,9 +82,10 @@ So where do these shortcuts come from?  Well, much like Hansel and
 Gretel dropped breadcrumbs, they are created while Athena is searching for 
 stuff. Basically as Athena searches, it keeps track of objects it could have 
 skipped, and creates shortcuts to avoid checking those objects in the future.
-The process bears some resemblance to [skip lists](http://en.wikipedia.org/wiki/Skip_list).
+I've done my best to document the shortcut creation algorithm through commenting 
+in the code, most of the action occurs in [http://github.com/sanity/Athena/blob/master/src/main/java/athena/StoreIterator.java](StoreIterator.java).
 
-Furthermore, since we can't have an infinite number of shortcuts, we only
+Note also that, since we can't have an infinite number of shortcuts, we only
 keep those that seem to be useful (ie. we delete the least recently used 
 shortcuts).
 
