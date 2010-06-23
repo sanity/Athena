@@ -37,7 +37,8 @@ Or let's say you wanted to get all the non-domesticated four legged animals:
 </pre>
 
 Athena allows you to do this, and what's more, it strives to allow you
-to do this efficiently.
+to do this efficiently even with millions of objects and queries far more
+complex than these simple examples.
 
 How it works
 ------------
