@@ -12,10 +12,10 @@ import org.testng.annotations.Test;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Sets;
 
-public class IntegrityTests {
+public class TestIntegrity {
 	Store<Set<String>> store;
 
-	public void search(final Query q) {
+	private void search(final Query q) {
 		final Store.StoreIterable<Set<String>> results4 = store.find(q);
 		System.out.println("Query: " + q + ", Found " + Iterables.size(results4) + " results with "
 				+ results4.counter() + " tests, shortcut count: " + store.shortcutCount());
