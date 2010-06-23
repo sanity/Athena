@@ -1,12 +1,16 @@
 package athena;
-import java.util.*;
+
+import static athena.Query.and;
+import static athena.Query.not;
+
+import java.util.Random;
+import java.util.Set;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.google.common.collect.*;
-
-import static athena.Query.*;
+import com.google.common.collect.Iterables;
+import com.google.common.collect.Sets;
 
 public class IntegrityTests {
 	Store<Set<String>> store;
