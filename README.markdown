@@ -1,5 +1,8 @@
-Athena, an efficient in-memory data structure supporting arbitrary boolean queries
-==================================================================================
+Athena
+======
+
+An efficient in-memory data structure supporting arbitrary boolean queries
+--------------------------------------------------------------------------
 
 License
 -------
