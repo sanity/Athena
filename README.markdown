@@ -11,9 +11,10 @@ http://www.gnu.org/licenses/lgpl-2.1.html for further information.
 
 Overview
 --------
-Athena is a free Java library which allows you to store objects, associating each
+Athena is a datastructure which allows you to store objects, associating each
 with a set of Strings, known as tags.  You can then retrieve these objects by
-specifying a boolean query on the tags.
+specifying a boolean query on the tags.  The prototype implementation is written
+in Java.
 
 For example, imagine you stored three types of animal with these tags:
 
