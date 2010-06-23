@@ -1,0 +1,6 @@
+#Mon Jun 21 17:31:43 CDT 2010
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.ignorelowercasenames=true
+org.eclipse.jdt.ui.importorder=java;javax;org;com;\#org.testng.Assert;\#ch.lanbdaj.Lambda;\#btq.Query;
+org.eclipse.jdt.ui.ondemandthreshold=2
+org.eclipse.jdt.ui.staticondemandthreshold=2
