@@ -4,9 +4,12 @@ Athena
 An efficient in-memory data structure supporting arbitrary boolean queries
 --------------------------------------------------------------------------
 
-Wiki, Mailing lists etc
+Important links
 -----------------------
-These are hosted on [Google Code](http://code.google.com/p/athena-tag-store/)
+* [Mailing List](http://groups.google.com/group/athena-discuss) - Please sign up to follow and participate in development
+* [Bug Tracker](http://code.google.com/p/athena-tag-store/issues/list)
+* [Google Code page](http://code.google.com/p/athena-tag-store/) - Mainly for the bugtracker
+* [Source Code](http://github.com/sanity/Athena) - Hosted on Github
 
 License
 -------
