@@ -14,6 +14,9 @@ import com.google.common.collect.Sets;
  * 
  */
 public abstract class Query {
+
+	// Various self-explanatory utility methods for convenient building of
+	// queries
 	public static Not and(final Query a) {
 		return new Not(a);
 	}
@@ -62,8 +65,15 @@ public abstract class Query {
 		return new Contains(tag);
 	}
 
+	/**
+	 * We compute the hashCode in the constructor for efficiency
+	 */
 	private final int hashCode;
 
+	/**
+	 * A QueryIntPair which indicates that a shortcut couldn't be found. It is
+	 * returned from the findShortCut() method
+	 */
 	public static final QueryIntPair SHORTCUT_NOT_FOUND = new QueryIntPair(null, -1);
 
 	public Query() {
@@ -87,6 +97,15 @@ public abstract class Query {
 	 */
 	public abstract Set<Query> falseIfFalse();
 
+	/**
+	 * Given a shortcut map, finds the next position we can safely jump to.
+	 * 
+	 * @param shortcuts
+	 *            Typically this comes from a Value's shortcuts field
+	 * @return Either SHORTCUT_NOT_FOUND or a QueryIntPair indicating the next
+	 *         position we can safely jump to, and the query associated with
+	 *         this shortcut
+	 */
 	public abstract QueryIntPair findShortCut(final HashMap<Query, Integer> shortcuts);
 
 	// TODO: Should reflect symmetry of OR and AND
@@ -95,6 +114,13 @@ public abstract class Query {
 		return hashCode;
 	}
 
+	/**
+	 * Does this query match this set of tags?
+	 * 
+	 * @param tags
+	 *            The tags to match
+	 * @return True if and only if the query matches the tags
+	 */
 	public abstract boolean match(Set<String> tags);
 
 	@Override
@@ -106,6 +132,9 @@ public abstract class Query {
 	 *         query matches a given set of tags.
 	 */
 	public abstract Set<Query> trueIfTrue();
+
+	// And now the specific implementations, hopefully these are relatively self
+	// explanatory
 
 	public static class And extends Query {
 
