@@ -85,4 +85,5 @@ Current status
 Still just a prototype, doesn't support modification or deletion of objects,
 and probably lots of room for efficiency improvements.  Also it probably
 isn't thread safe.  All of these shortcomings should be addressable without
-too much effort, this is still a very young endeavor.
+too much effort, this is still a very young endeavor.  I can't do this alone,
+so if this excites you and you think you can help, please [let me know](mailto:ian.clarke@gmail.com)
