@@ -90,8 +90,14 @@ shortcuts).
 
 How to play with it
 -------------------
-It should work "out of the box" in [Eclipse](http://eclipse.org/).  If not
-please [let me know](mailto:ian.clarke@gmail.com).
+It should work "out of the box" assuming you have Maven 2 installed.  Just grab
+the source code and type:
+
+<pre>
+  mvn assembly:assembly
+</pre>
+
+If not please [file a bug report](http://github.com/sanity/Athena/issues).
 
 [This unit test](http://github.com/sanity/Athena/blob/master/src/test/java/athena/IntegrityTests.java)
 provides a good example of basic usage.
@@ -102,4 +108,4 @@ Still just a prototype, doesn't support modification or deletion of objects,
 and probably lots of room for efficiency improvements.  Also it probably
 isn't thread safe.  All of these shortcomings should be addressable without
 too much effort, this is still a very young endeavor.  I can't do this alone,
-so if this excites you and you think you can help, please [let me know](mailto:ian.clarke@gmail.com)
+so if this excites you and you think you can help, please [join our mailing list](http://groups.google.com/group/athena-discuss).
