@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.uprizer</groupId>
+  <artifactId>athena</artifactId>
+  <name>Athena</name>
+  <version>0.1-SNAPSHOT</version>
+  <description>An efficient in-memory data structure supporting arbitrary boolean queries</description>
+  <url>http://github.com/sanity/Athena</url>
+  <issueManagement>
+  	<system>GitHub</system>
+  	<url>http://github.com/sanity/Athena/issues</url>
+  </issueManagement>
+  <developers>
+  	<developer>
+  		<id>sanity</id>
+  		<name>Ian Clarke</name>
+  		<email>ian@uprizer.com</email>
+  		<url>http://blog.locut.us/</url>
+  		<organization>Uprizer Labs LLC</organization>
+  		<organizationUrl>http://uprizer.com/</organizationUrl>
+  		<timezone>Central</timezone>
+  	</developer>
+  </developers>
+  <scm>
+  </scm>
+  <organization>
+  	<name>Uprizer Labs LLC</name>
+  	<url>http://uprizer.com/</url>
+  </organization>
+  <build>
+  <plugins>
+  	<plugin>
+  		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-compiler-plugin</artifactId>
+  		<configuration>
+  			<source>1.6</source>
+  			<target>1.6</target>
+  		</configuration>
+  	</plugin>
+  	
+  	<plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>com.uprizer.sensearray.Main</mainClass>
+            </manifest>
+          </archive> 
+        </configuration>
+    </plugin>
+  	
+  	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.4.2</version>
+        <configuration>
+         	<argLine>-Xmx256M</argLine>
+        </configuration>
+    </plugin>
+  	
+  	
+  </plugins>
+  </build>
+  <repositories>
+  
+  </repositories>
+  <dependencies>
+   	<dependency>
+	   <groupId>com.google.guava</groupId>
+	   <artifactId>guava</artifactId>
+	   <version>r05</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>5.8</version>
+	    <scope>test</scope>
+	    <classifier>jdk15</classifier>
+	</dependency>
+  </dependencies>
+</project>
