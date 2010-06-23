@@ -7,7 +7,7 @@ An efficient in-memory data structure supporting arbitrary boolean queries
 License
 -------
 Athena is released under the GNU Lesser Public License V2.1. Please see
-http://www.gnu.org/licenses/lgpl-2.1.html for further information.
+[http://www.gnu.org/licenses/lgpl-2.1.html](http://www.gnu.org/licenses/lgpl-2.1.html) for further information.
 
 Overview
 --------
