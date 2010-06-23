@@ -57,3 +57,8 @@ query Y, then you can skip to object X.  It further means that if you are
 looking for objects that match query Z, and you know that no object that
 matches query Z will match query Y, then you can also skip to object X.
 
+Ok, cool, but where do these shortcuts come from?  Well, much like Hansel and
+Gretel, they are created like breadcrumbs while Athena is searching for stuff.
+Furthermore, since we can't have an infinite number of shortcuts, we only
+keep those that seem to be useful (ie. we delete the least recently used 
+shortcuts).
