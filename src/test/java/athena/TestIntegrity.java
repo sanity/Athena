@@ -2,6 +2,7 @@ package athena;
 
 import static athena.Query.and;
 import static athena.Query.not;
+import static athena.Query.or;
 
 import java.util.Random;
 import java.util.Set;
@@ -15,16 +16,9 @@ import com.google.common.collect.Sets;
 public class TestIntegrity {
 	Store<Set<String>> store;
 
-	private void search(final Query q) {
-		final Store.StoreIterable<Set<String>> results4 = store.find(q);
-		System.out.println("Query: " + q + ", Found " + Iterables.size(results4) + " results with "
-				+ results4.counter() + " tests, shortcut count: " + store.shortcutCount());
-		Assert.assertTrue(store.checkIntegrity());
-	}
-
 	@Test
 	public void simpleIntegrityTest() {
-		final Query qA = and("1", and(and(and("3", "2"), not("6")), not(and(not("3"), and("1", "6")))));
+		final Query qA = and("1", and(and(and("3", "2"), not("6")), not(or(not("3"), and("1", "6")))));
 
 		final Query qB = and("3", and(and(and("3", "2"), not("6")), not(and(not("3"), and("1", "4")))));
 
@@ -47,8 +41,15 @@ public class TestIntegrity {
 		search(qA);
 		search(qB);
 		search(qB);
-		// for (int t = 0; t < store.values.size(); t++) {
-		// System.out.println(t + " : " + store.values.get(t));
-		// }
+		for (int t = 0; t < store.values.size(); t++) {
+			System.out.println(t + " : " + store.values.get(t));
+		}
+	}
+
+	private void search(final Query q) {
+		final Store.StoreIterable<Set<String>> results4 = store.find(q);
+		System.out.println("Query: " + q + ", Found " + Iterables.size(results4) + " results with "
+				+ results4.counter() + " tests, shortcut count: " + store.shortcutCount());
+		Assert.assertTrue(store.checkIntegrity());
 	}
 }

@@ -121,7 +121,9 @@ public class StoreIterator<V> extends AbstractIterator<V> {
 		// We've run out of values, point everything in previousMatchMap to
 		// the position after the end of the ArrayList
 		for (final Entry<Query, Value<V>> e : previousMatchMap.entrySet()) {
-			e.getValue().shortcuts.put(e.getKey(), position);
+			if (e.getValue().position < position - 1) {
+				e.getValue().shortcuts.put(e.getKey(), position);
+			}
 		}
 
 		return endOfData();

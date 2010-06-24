@@ -16,6 +16,12 @@ License
 Athena is released under the GNU Lesser Public License V2.1. Please see
 [http://www.gnu.org/licenses/lgpl-2.1.html](http://www.gnu.org/licenses/lgpl-2.1.html) for further information.
 
+Blame
+-----
+Athena was conceived and the initial Java prototype was written by Ian Clarke, who
+previously conceived [Freenet](http://freenetproject.org/), [Swarm](http://code.google.com/p/swarm-dpl/),
+co-founded [Revver](http://revver.com/), and currently works on [SenseArray](http://sensearray.com/).
+
 Overview
 --------
 Athena is an in-memory datastructure which allows you to store objects, associating each
