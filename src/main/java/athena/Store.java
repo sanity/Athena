@@ -19,7 +19,7 @@ import com.google.common.collect.Maps;
  *            The type of the values stored
  */
 public class Store<V> {
-	public static final int MAX_SEED_SIZE = 500;
+	// public static final int MAX_SEED_SIZE = 500;
 
 	/**
 	 * This is where the actual data is stored.
@@ -40,7 +40,8 @@ public class Store<V> {
 		this.maxShortcuts = maxShortcuts;
 		// The first element is a dummy "seed" value which allows us
 		// to skip into the store initially
-		values.add(new Value<V>(null, null, MAX_SEED_SIZE, values.size()));
+		// values.add(new Value<V>(null, null, MAX_SEED_SIZE, values.size()));
+		values.add(new Value<V>(null, null, maxShortcuts, values.size()));
 	}
 
 	/**

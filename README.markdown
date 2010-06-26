@@ -58,7 +58,7 @@ Applications
 ------------
 The motivation for designing Athena was a situation where I have tens of thousands 
 of objects, each of which may have 10-20 tags, and where I need to be able to
-retrieve these objects using boolean queries in a matter of milliseconds.  This
+retrieve these objects using boolean queries in a matter of microseconds.  This
 implies that there is no time to do a disk seek, the data must be in memory,
 and an exhaustive search will be out of the question.
 
