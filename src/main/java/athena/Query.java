@@ -164,7 +164,7 @@ public abstract class Query {
 				return new QueryIntPair(this, ret);
 			else {
 				final QueryIntPair aQIP = a.findShortCut(shortcuts);
-				final QueryIntPair bQIP = a.findShortCut(shortcuts);
+				final QueryIntPair bQIP = b.findShortCut(shortcuts);
 				if (aQIP.i > bQIP.i)
 					return aQIP;
 				else
@@ -301,7 +301,7 @@ public abstract class Query {
 				return new QueryIntPair(this, ret);
 			else {
 				final QueryIntPair aQIP = a.findShortCut(shortcuts);
-				final QueryIntPair bQIP = a.findShortCut(shortcuts);
+				final QueryIntPair bQIP = b.findShortCut(shortcuts);
 
 				if (aQIP.i < bQIP.i)
 					return aQIP;

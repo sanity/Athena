@@ -104,8 +104,27 @@ public class StoreIterator<V> extends AbstractIterator<V> {
 						it.remove();
 					}
 				}
+
+				// REMOVEME!!!!
+				// Verify that we should really be skipping
+				// for (int x = position + 1; x < bestShortcut.i; x++) {
+				// if (query.match(parent.values.get(x).tags)) {
+				// System.out
+				// .println("Shortcut: " + bestShortcut.q + " from " + position
+				// + " to " + bestShortcut.i
+				// + " skipped "
+				// + parent.values.get(x).tags + " but they match " + query);
+				// System.out.println(query.toString() + " trueIfTrue: " +
+				// query.trueIfTrue() + " falseIfFalse: "
+				// + query.falseIfFalse());
+				// System.out.println("Shortcuts: " + current.shortcuts);
+				// query.findShortCut(current.shortcuts);
+				// }
+				// }
+
 				// And finally update our position, skipping ahead
 				position = bestShortcut.i;
+
 			} else {
 				// Can't find a shortcut, just move to the next position
 				position++;
