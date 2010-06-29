@@ -1,4 +1,4 @@
-package athena;
+package athena.benchmarks;
 
 import java.text.DecimalFormat;
 import java.util.*;
@@ -7,10 +7,11 @@ import org.testng.v6.Sets;
 
 import com.google.common.collect.*;
 
+import athena.*;
 import athena.Query.*;
 import athena.Store.StoreIterable;
 
-public class ShortcutNumberMeasurement {
+public class ShortcutNumberBenchmark {
 	public static final int QUERIES = 100, OBJECTS = 100000, TAGS = 50, TAGS_PER_OBJECT = 10, QUERY_MAX_DEPTH = 7;
 	private static final int QUERY_CYCLES = 2;
 
@@ -76,7 +77,7 @@ public class ShortcutNumberMeasurement {
 				// throw new RuntimeException("Integrity check failed");
 				ttlScanned += tags.size();
 				ttlResults += Iterables.size(results);
-				ttlTests += results.counter;
+				ttlTests += results.counter();
 				count++;
 			}
 		}
